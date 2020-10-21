@@ -1,0 +1,271 @@
+body{
+    background-image: url(login-background.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;  
+}
+
+.form-container{
+    background-color: ghostwhite;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.date{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+} 
+
+
+.clock {
+    width: 100px;
+    height: 100px;
+    background-color: ghostwhite;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+  }
+  
+  .clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1rem;
+  }
+  
+  .clock .number1 { --rotation: 30deg; }
+  .clock .number2 { --rotation: 60deg; }
+  .clock .number3 { --rotation: 90deg; }
+  .clock .number4 { --rotation: 120deg; }
+  .clock .number5 { --rotation: 150deg; }
+  .clock .number6 { --rotation: 180deg; }
+  .clock .number7 { --rotation: 210deg; }
+  .clock .number8 { --rotation: 240deg; }
+  .clock .number9 { --rotation: 270deg; }
+  .clock .number10 { --rotation: 300deg; }
+  .clock .number11 { --rotation: 330deg; }
+  
+  .clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  
+  .clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .clock .hand.second {
+    width: 1px;
+    height: 40%;
+    background-color: red;
+  }
+  
+  .clock .hand.minute {
+    width: 3px;
+    height: 35%;
+    background-color: black;
+  }
+  
+  .clock .hand.hour {
+    width: 5px;
+    height: 30%;
+    background-color: black;
+  }
+
+
+  .weath-container{
+    width: 250px;    
+    background-color: ghostwhite;
+    
+    display: block;
+    margin: 0 auto;
+    
+    border-radius: 10px;
+    padding-bottom : 50px;
+}
+
+.weather-title{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.weather-title p{
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-weight: 200;
+    color: #293251;
+}
+
+.notification{
+    background-color: #f8d7da;
+    display: none;
+}
+
+.notification p{
+    color: #721c24;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container{
+    width: 250px;
+    height: 260px;
+    background-color: #F4F9FF;
+}
+
+.weather-icon{
+    width: 250px;
+    height: 128px;
+}
+
+.weather-icon img{
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value{
+    width: 250px;
+    height:60px;
+}
+
+.temperature-value p{
+    padding: 0;
+    margin: 0;
+    color: #293251;
+    font-size: 3em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value p:hover{
+    
+}
+
+.temperature-value span{
+    color: #293251;
+    font-size: 0.5em;
+}
+
+.temperature-description{
+    
+}
+
+.temperature-description p{
+    padding: 8px;
+    margin: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.location{
+    
+}
+
+.location p{
+    margin: 0;
+    padding: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.tags-input{
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+
+.tags-input .tag{
+    
+    padding: 0.5em 0.75em;
+    margin: 0.25em 0.1em;
+    display: inline-block;
+    background-color: #ddd;
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+
+.tags-input .tag:hover{
+    background-color: 3af;
+    color: ghostwhite;
+}
+
+.tags-input .tag .close::after{
+    font-size: 85%;
+    content: '×';
+    font-weight: bold;
+    display: inline-block;
+    transform: scale(1.4);
+    margin-left: 0.75em;
+}
+
+.tags-input .tag .close:hover::after{
+    color: red;
+}
+
+.tags-input .main-input{
+    border: 0;
+    outline:0;
+    padding:0.5em 0.1em;
+}
+.tagify{    
+    width: 100%;
+    max-width: 700px;
+  }
+
+  @media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+}
+
+  table {
+      width: 100%;
+    border-collapse: collapse;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+  }
+  
+  table, tr, td {
+    border: 1px solid black;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px black;
+    display: block;
+  }
+
+  tr, td {
+    text-align: left; 
+    font-weight: bold; 
+   
+  }
